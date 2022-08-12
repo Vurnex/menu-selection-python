@@ -7,28 +7,26 @@ def main():
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 
-def MainMenu(): #main menu
+def MainMenu():
   
  cls()
  
  print("\nIn Main Menu\n")
 
- userChoice = 0 #create variable to hold our user's choice
+ userChoice = 0
  
- while int(userChoice) !=5: #loops through while not equal to 5
+ while int(userChoice) !=5:
    
-   #print our options
    print("\n1- Appointments")
    print("2- Patients")
    print("3- Staff")
    print("4- Exit\n")
 
-   #prompt our input and get choice from the user
    userChoice = input("Please enter your menu choice: ")
    
-   while int(userChoice) < 1 or int(userChoice) > 4: #ensure a response of 1-3
+   while int(userChoice) < 1 or int(userChoice) > 4:
      print("Valid choices are 1-4\n")
-     userChoice = input("Please enter your menu choice") #reenter their choice
+     userChoice = input("Please enter your menu choice")
 
    if int(userChoice) == 1:
      AppointmentsMenu()
